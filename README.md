@@ -5,7 +5,7 @@
   <img width="200" src="./docs/logo-dark.svg#gh-dark-mode-only" />
 
   <p align="center">
-    Take control of your finances with MoneyTracker
+    Take control of your finances with MoneyTracker!
     <br />
     <a href="#">View Demo</a>
     ·
