@@ -1,8 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img width="220" src="./docs/logo-light.svg#gh-light-mode-only" />
-  <img width="220" src="./docs/logo-dark.svg#gh-dark-mode-only" />
+  <img width="200" src="./docs/logo-light.svg#gh-light-mode-only" />
+  <img width="200" src="./docs/logo-dark.svg#gh-dark-mode-only" />
 
   <p align="center">
     Take control of your finances with MoneyTracker
