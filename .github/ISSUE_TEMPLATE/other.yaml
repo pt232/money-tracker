@@ -1,0 +1,16 @@
+name: Other
+description: Use this for any other issues
+title: "[OTHER] "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this issue!
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe your issue in a clear and concise way.
+    validations:
+      required: true
