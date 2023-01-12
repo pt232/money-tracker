@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "tsc && eslint .",
     "lint:fix": "eslint . --fix",
     "lint:css": "npx stylelint \"**/*.css\"",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {

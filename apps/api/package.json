@@ -1,5 +1,6 @@
 {
-  "name": "money-tracker-server",
+  "name": "money-tracker-api",
+  "private": true,
   "version": "1.0.0",
   "description": "This server powers the MoneyTracker application, enabling the management and tracking of financial transactions and data.",
   "main": "dist/index.js",
