@@ -1,7 +1,7 @@
 {
   "name": "money-tracker-api",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "This server powers the MoneyTracker application, enabling the management and tracking of financial transactions and data.",
   "main": "dist/index.js",
   "type": "module",
@@ -20,7 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "tsconfig": "*"
   },
   "devDependencies": {
     "@types/express": "^4.17.15",
