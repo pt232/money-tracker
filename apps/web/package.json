@@ -2,6 +2,7 @@
   "name": "money-tracker-web",
   "private": true,
   "version": "0.0.0",
+  "description": "The client of the MoneyTracker application, enabling the management and tracking of financial transactions and data.",
   "type": "module",
   "scripts": {
     "lint": "tsc && eslint .",
@@ -11,6 +12,14 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "author": "Tobias Peters",
+  "repository": {
+    "url": "https://github.com/pt232/money-tracker",
+    "directory": "server",
+    "type": "git"
+  },
+  "homepage": "https://github.com/pt232/money-tracker#readme",
+  "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

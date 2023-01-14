@@ -1,5 +1,8 @@
 {
+  "name": "money-tracker",
   "private": true,
+  "version": "0.0.0",
+  "description": "MoneyTracker is a personal finance management application that helps users track their income and expenses for an overview of their finances.",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -9,6 +12,14 @@
     "dev": "turbo run dev --filter=./apps/*",
     "lint": "turbo run lint"
   },
+  "author": "Tobias Peters",
+  "repository": {
+    "url": "https://github.com/pt232/money-tracker",
+    "directory": "server",
+    "type": "git"
+  },
+  "homepage": "https://github.com/pt232/money-tracker#readme",
+  "license": "MIT",
   "devDependencies": {
     "turbo": "^1.7.0"
   }
