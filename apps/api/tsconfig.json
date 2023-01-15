@@ -4,5 +4,5 @@
     "rootDir": "src",
     "outDir": "dist"
   },
-  "include": ["src/**/*", ".eslintrc.json", "env.d.ts"]
+  "include": ["src/**/*", ".eslintrc.js", "env.d.ts"]
 }
