@@ -10,7 +10,9 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --filter=./apps/*",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "author": "Tobias Peters",
   "repository": {
@@ -21,7 +23,9 @@
   "homepage": "https://github.com/pt232/money-tracker#readme",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^2.8.3",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "2.8.3",
     "turbo": "^1.7.0"
   }
 }
