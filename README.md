@@ -22,6 +22,7 @@ MoneyTracker is a web-based application that allows users to track their income 
 :construction: Please note that MoneyTracker is a personal project and is still under development.
 
 ## Table of contents
+
 - [Features](#features)
 - [Installing MoneyTracker](#installing-moneytracker)
   - [Prerequisites](#prerequisites)
@@ -30,18 +31,23 @@ MoneyTracker is a web-based application that allows users to track their income 
 - [License](#license)
 
 ## Features
+
 Features will be listed here soon.
 
 ## Installing MoneyTracker
+
 More information is on the way.
 
 ### Prerequisites
+
 There are no prerequisites yet.
 
 ### Installation
+
 There is currently no guide for installation.
 
 ## Technologies used
+
 - [React](https://reactjs.org/)
 - [Node.js](https://nodejs.org/)
 - [Express.js](https://expressjs.com/)
@@ -53,4 +59,5 @@ There is currently no guide for installation.
 - [GitHub Actions](https://github.com/features/actions)
 
 ## License
+
 MoneyTracker is licensed under the MIT license.
