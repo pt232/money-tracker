@@ -5,11 +5,11 @@
   "description": "The client of the MoneyTracker application, enabling the management and tracking of financial transactions and data.",
   "type": "module",
   "scripts": {
-    "lint": "tsc && eslint .",
+    "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:css": "npx stylelint \"**/*.css\"",
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "author": "Tobias Peters",
@@ -27,7 +27,6 @@
   "devDependencies": {
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@vitejs/plugin-react": "^3.0.0",
     "eslint-plugin-react": "^7.32.0",
     "eslint-plugin-react-hooks": "^4.6.0",
