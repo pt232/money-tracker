@@ -23,6 +23,8 @@
   "homepage": "https://github.com/pt232/money-tracker#readme",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
     "prettier": "2.8.3",
