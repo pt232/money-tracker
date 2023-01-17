@@ -1,5 +1,5 @@
 {
-  "*.{js,ts,tsx}": ["npm run format", "turbo run lint:fix lint"],
-  "*.css": ["turbo run lint:css"],
+  "*.{js,cjs,ts,tsx}": ["npm run format", "npx turbo run lint"],
+  "*.css": ["npx turbo run lint:css"],
   "*.json": ["npm run format"]
 }
