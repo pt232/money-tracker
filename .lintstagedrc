@@ -1,5 +1,5 @@
 {
-  "*.{js,cjs,ts,tsx}": ["npm run format", "npx turbo run lint"],
-  "*.css": ["npx turbo run lint:css"],
-  "*.json": ["npm run format"]
+  "*.json": "npm run format",
+  "*.{js,cjs,ts,tsx}": "eslint --fix",
+  "*.css": "npx stylelint \"**/*.css\""
 }

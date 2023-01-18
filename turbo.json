@@ -4,10 +4,7 @@
     "build": {
       "outputs": ["dist/**"]
     },
-    "lint:fix": {},
-    "lint": {
-      "dependsOn": ["lint:fix"]
-    },
+    "lint": {},
     "dev": {
       "cache": false,
       "persistent": true
