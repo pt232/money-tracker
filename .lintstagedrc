@@ -1,5 +1,5 @@
 {
-  "*.json": "npm run format",
+  "*": "npm run format",
   "*.{js,cjs,ts,tsx}": "eslint --fix",
   "*.css": "npx stylelint \"**/*.css\""
 }
