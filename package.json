@@ -10,7 +10,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --filter=./apps/*",
-    "lint": "turbo run lint",
+    "lint": "turbo run lint --",
+    "lint:css": "turbo run lint:css --",
     "format": "prettier --write .",
     "prepare": "husky install"
   },
