@@ -21,10 +21,5 @@ COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
 RUN npx turbo run build --filter=money-tracker-web...
 
-FROM node:18.13.0-alpine AS runner
-WORKDIR /app
-
-COPY --from=installer /app .
-
-EXPOSE 3000
-CMD ["npm", "run", "preview", "--prefix", "apps/web"]
+FROM nginx:1.23-alpine
+COPY --from=installer /app/apps/web/dist /usr/share/nginx/html
