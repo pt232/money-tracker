@@ -1,7 +1,9 @@
 node_modules
 .git
 .env
-
-# Editor directories and files
 .DS_Store
 .idea
+.vscode
+Dockerfile
+Dockerfile.dev
+README.md

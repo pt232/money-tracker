@@ -5,9 +5,11 @@ services:
     container_name: money-tracker-web
     build:
       context: .
-      dockerfile: ./apps/web/Dockerfile
+      dockerfile: ./apps/web/Dockerfile.dev
     ports:
       - 3000:3000
+    volumes:
+      - ./apps/web:/app/apps/web
   api:
     container_name: money-tracker-api
     build:
