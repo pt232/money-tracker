@@ -24,6 +24,10 @@ RUN npx turbo run build --filter=money-tracker-api...
 FROM node:18.13.0-alpine AS runner
 WORKDIR /app
 
+RUN addgroup --system expressjs-group
+RUN adduser --system expressjs -G expressjs-group
+USER expressjs
+
 COPY --from=installer /app .
 
 EXPOSE 5000
