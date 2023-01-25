@@ -11,3 +11,5 @@ updates:
       prefix: "chore(deps)"
     labels:
       - "dependencies"
+    reviewers:
+      - pt232
