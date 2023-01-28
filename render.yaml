@@ -18,6 +18,7 @@ services:
     dockerContext: .
     envVars:
       - key: MONGO_URL
+        sync: false
     domains:
       - money-tracker-api.render.com
     region: frankfurt
