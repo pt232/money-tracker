@@ -1,24 +1,31 @@
 services:
   - type: web
+    plan: free
     name: money-tracker-web
     env: docker
-    rootDir: ./apps/web
-    dockerfilePath: ./Dockerfile.prod
+    dockerfilePath: ./apps/web/Dockerfile.prod
     dockerContext: .
+    buildFilter:
+      paths:
+        - apps/web/**/*.ts
+        - apps/web/**/*.tsx
     domains:
       - money-tracker.render.com
     region: frankfurt
     repo: https://github.com/pt232/money-tracker.git
 
   - type: web
+    plan: free
     name: money-tracker-api
     env: docker
-    rootDir: ./apps/api
-    dockerfilePath: ./Dockerfile.prod
+    dockerfilePath: ./apps/api/Dockerfile.prod
     dockerContext: .
     envVars:
       - key: MONGO_URL
         sync: false
+    buildFilter:
+      paths:
+        - apps/api/**/*.ts
     domains:
       - money-tracker-api.render.com
     region: frankfurt
