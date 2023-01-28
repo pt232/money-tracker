@@ -10,7 +10,7 @@ services:
     region: frankfurt
     repo: https://github.com/pt232/money-tracker.git
 
-  - type: api
+  - type: web
     name: money-tracker-api
     env: docker
     rootDir: ./apps/api
