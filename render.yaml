@@ -17,23 +17,8 @@ services:
     dockerfilePath: ./Dockerfile.prod
     dockerContext: .
     envVars:
-      - key: MONGO_URL
-        fromDatabase:
-          name: mongodb
-          property: connectionString
+      - MONGO_URL
     domains:
       - money-tracker-api.render.com
     region: frankfurt
     repo: https://github.com/pt232/money-tracker.git
-
-  - type: pserv
-    name: mongodb
-    env: docker
-    autoDeploy: false
-    disk:
-      name: data
-      mountPath: /data/db
-      sizeGB: 10
-
-databases:
-  - name: mongodb
