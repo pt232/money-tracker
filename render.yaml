@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: money-tracker-web
+    env: docker
+    rootDir: ./apps/web
+    dockerfilePath: ./Dockerfile.prod
+    dockerContext: .
+    domains:
+      - money-tracker.render.com
+    region: frankfurt
+    repo: https://github.com/pt232/money-tracker.git
+
+  - type: api
+    name: money-tracker-api
+    env: docker
+    rootDir: ./apps/api
+    dockerfilePath: ./Dockerfile.prod
+    dockerContext: .
+    envVars:
+      - key: MONGO_URL
+        fromDatabase:
+          name: mongodb
+          property: connectionString
+    domains:
+      - money-tracker-api.render.com
+    region: frankfurt
+    repo: https://github.com/pt232/money-tracker.git
+
+  - type: pserv
+    name: mongodb
+    env: docker
+    autoDeploy: false
+    disk:
+      name: data
+      mountPath: /data/db
+      sizeGB: 10
+
+databases:
+  - name: mongodb
