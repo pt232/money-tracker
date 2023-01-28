@@ -17,7 +17,7 @@ services:
     dockerfilePath: ./Dockerfile.prod
     dockerContext: .
     envVars:
-      - MONGO_URL
+      - key: MONGO_URL
     domains:
       - money-tracker-api.render.com
     region: frankfurt
