@@ -9,8 +9,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "node dist/index.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon --quiet dist/index.js\"",
-    "build": "tsc"
+    "dev": "npm-run-all --parallel build:watch dev:watch",
+    "dev:watch": "nodemon --quiet dist/index.js",
+    "build": "tsc",
+    "build:watch": "tsc --watch"
   },
   "author": "Tobias Peters",
   "repository": {
@@ -32,6 +34,7 @@
     "eslint-config-custom": "*",
     "eslint-config-standard-with-typescript": "^33.0.0",
     "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
     "tsconfig": "*",
     "typescript": "^4.9.4"
   }
