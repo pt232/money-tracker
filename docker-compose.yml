@@ -17,6 +17,8 @@ services:
       dockerfile: ./apps/api/Dockerfile.dev
     ports:
       - 5000:5000
+    env_file:
+      - ./apps/api/.env
     volumes:
       - ./apps/api:/app/apps/api
     depends_on:
