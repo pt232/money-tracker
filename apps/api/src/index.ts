@@ -17,3 +17,5 @@ mongoose.connect(mongoUrl).then(() => {
     console.log(`⚡️ Server is running at http://localhost:${port}`),
   );
 });
+
+export default app;

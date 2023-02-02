@@ -8,11 +8,13 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "dev": "npm-run-all --parallel build:watch dev:watch",
     "dev:watch": "nodemon --quiet dist/index.js",
     "build": "tsc",
-    "build:watch": "tsc --watch"
+    "build:watch": "tsc --watch",
+    "start": "node dist/index.js"
   },
   "author": "Tobias Peters",
   "repository": {
@@ -29,12 +31,17 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.16",
+    "@types/jest": "^29.4.0",
     "@types/node": "^18.11.18",
+    "@types/supertest": "^2.0.12",
     "concurrently": "^7.6.0",
     "eslint-config-custom": "*",
     "eslint-config-standard-with-typescript": "^33.0.0",
+    "jest": "^29.4.1",
     "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.0.5",
     "tsconfig": "*",
     "typescript": "^4.9.4"
   }
