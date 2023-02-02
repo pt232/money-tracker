@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "description": "This server powers the MoneyTracker application, enabling the management and tracking of financial transactions and data.",
   "main": "dist/index.js",
-  "type": "module",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
