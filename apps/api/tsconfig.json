@@ -3,6 +3,5 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src/**/*", ".eslintrc.cjs", "env.d.ts"],
-  "exclude": ["src/**/*.test.ts"]
+  "include": ["src/**/*", ".eslintrc.cjs", "jest.config.ts", "env.d.ts"]
 }
