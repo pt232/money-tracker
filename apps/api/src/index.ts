@@ -5,8 +5,8 @@ import mongoose from "mongoose";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT;
-const mongoUrl = process.env.MONGO_URL;
+const port = process.env.PORT || 5000;
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost:27017/";
 
 app.get("/", (req, res) => {
   res.send("Hello World 👋");
