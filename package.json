@@ -15,7 +15,7 @@
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "dev": "turbo run dev",
-    "dev:start": "docker-compose up -d",
+    "dev:start": "docker compose up -d",
     "build": "turbo run build"
   },
   "author": "Tobias Peters",
