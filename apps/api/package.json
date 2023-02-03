@@ -3,18 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "description": "This server powers the MoneyTracker application, enabling the management and tracking of financial transactions and data.",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "dev": "npm-run-all --parallel build:watch dev:watch",
-    "dev:watch": "nodemon --quiet dist/index.js",
+    "dev:watch": "nodemon --quiet dist/server.js",
     "build": "npm run build:clean && tsc --project tsconfig.build.json",
     "build:clean": "rimraf dist",
     "build:watch": "tsc --watch",
-    "start": "node dist/index.js"
+    "start": "node dist/server.js"
   },
   "author": "Tobias Peters",
   "repository": {
