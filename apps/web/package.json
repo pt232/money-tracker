@@ -8,8 +8,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:css": "npx stylelint \"**/*.css\"",
-    "test": "vitest run",
+    "test": "vitest run && cypress run",
     "test:watch": "vitest",
+    "test:e2e": "cypress open",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -32,6 +33,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
+    "cypress": "^12.5.1",
     "eslint-config-custom": "*",
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",

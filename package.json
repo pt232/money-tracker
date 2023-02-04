@@ -14,6 +14,7 @@
     "lint:css": "FORCE_COLOR=1 turbo run lint:css --",
     "test": "FORCE_COLOR=1 turbo run test",
     "test:watch": "FORCE_COLOR=1 turbo run test:watch",
+    "test:e2e": "FORCE_COLOR=1 turbo run test:e2e --filter=money-tracker-web",
     "dev": "FORCE_COLOR=1 turbo run dev",
     "dev:start": "docker compose up -d",
     "build": "FORCE_COLOR=1 turbo run build"
