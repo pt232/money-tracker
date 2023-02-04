@@ -15,7 +15,8 @@
   </p>
 </div>
 
-![MoneyTracker Dashboard Mockup](./docs/mockup.png)
+![MoneyTracker Dashboard Mockup](./docs/mockup-light.png#gh-light-mode-only)
+![MoneyTracker Dashboard Mockup](./docs/mockup-dark.png#gh-dark-mode-only)
 
 [MoneyTracker](https://money-tracker-web.onrender.com/) is a web-based application that allows users to track their income and expenses to gain insight into their financial situation. By tracking all financial transactions, users can better understand their spending habits and make informed decisions about their money.
 
