@@ -8,6 +8,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:css": "npx stylelint \"**/*.css\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -25,17 +27,21 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
+    "eslint-config-custom": "*",
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-config-custom": "*",
+    "jsdom": "^21.1.0",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^29.0.0",
+    "tsconfig": "*",
     "typescript": "^4.9.4",
     "vite": "^4.0.0",
-    "tsconfig": "*"
+    "vitest": "^0.28.4"
   }
 }
