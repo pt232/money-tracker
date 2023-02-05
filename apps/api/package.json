@@ -13,7 +13,7 @@
     "dev:watch": "nodemon --quiet dist/server.js",
     "build": "npm run build:clean && tsc --project tsconfig.build.json",
     "build:clean": "rimraf dist",
-    "build:watch": "tsc --watch",
+    "build:watch": "tsc --project tsconfig.build.json --watch",
     "start": "node dist/server.js"
   },
   "author": "Tobias Peters",
