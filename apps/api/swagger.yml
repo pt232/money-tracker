@@ -1,0 +1,14 @@
+openapi: "3.0.0"
+info:
+  title: MoneyTracker API
+paths:
+  /:
+    get:
+      summary: Returns the welcome message
+      responses:
+        200:
+          description: Successful response. Returns the welcome message in plain text format.
+          content:
+            text/plain:
+              schema:
+                type: string
