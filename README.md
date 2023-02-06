@@ -88,8 +88,8 @@ npm run dev:start -- -d
 
 - [Node.js](https://nodejs.org/) - as the server-side JavaScript runtime environment 
 - [Express.js](https://expressjs.com/) - for building the API
-- [MongoDB](https://www.mongodb.com/) - for the database
 - [TypeScript](https://www.typescriptlang.org/) - for adding static typing and improving maintainability
+- [MongoDB](https://www.mongodb.com/) - for the database
 - [Swagger UI](https://swagger.io/tools/swagger-ui/) - for the API documentation
 
 ### Development and Deployment
