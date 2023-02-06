@@ -91,6 +91,7 @@ In addition to the technologies listed below, the design of the project was crea
 - [Node.js](https://nodejs.org/) - as the server-side JavaScript runtime environment 
 - [Express.js](https://expressjs.com/) - for building the API
 - [TypeScript](https://www.typescriptlang.org/) - for adding static typing and improving maintainability
+- [SuperTest](https://github.com/ladjs/supertest) - for API testing in combination with Jest
 - [MongoDB](https://www.mongodb.com/) - for the database
 - [Swagger UI](https://swagger.io/tools/swagger-ui/) - for the API documentation
 
