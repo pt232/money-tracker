@@ -76,6 +76,8 @@ npm run dev:start -- -d
 
 ## Technologies used
 
+In addition to the technologies listed below, the design of the project was created using [Figma](https://www.figma.com/). It follows the principles of Brad Frost's Atomic Design framework. You can take a look at the design system of the MoneyTracker application [here](https://www.figma.com/file/qL8FNjTS0F2Jps9iPvaRSr/MoneyTracker?node-id=0%3A1&t=SwknO7cZihvmSKTM-1).
+
 ### Frontend 
 
 - [React](https://reactjs.org/) - for building user interfaces
