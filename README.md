@@ -1,5 +1,3 @@
-<a name="readme-top"></a>
-
 <div align="center">
   <img width="200" src="./docs/logo-light.svg#gh-light-mode-only" />
   <img width="200" src="./docs/logo-dark.svg#gh-dark-mode-only" />
@@ -9,9 +7,9 @@
     <br />
     <a href="https://money-tracker-web.onrender.com/">View Demo</a>
     ·
-    <a href="#">Report Bug</a>
+    <a href="https://github.com/pt232/money-tracker/issues">Report Bug</a>
     ·
-    <a href="#">Request Feature</a>
+    <a href="https://github.com/pt232/money-tracker/issues">Request Feature</a>
   </p>
 </div>
 
@@ -25,39 +23,80 @@
 ## Table of contents
 
 - [Features](#features)
-- [Installing MoneyTracker](#installing-moneytracker)
+- [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Technologies used](#technologies-used)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+  - [Development and Deployment](#development-and-deployment)
 - [License](#license)
 
 ## Features
 
-Features will be listed here soon.
+💸 Get a comprehensive overview of your finances<br>
+🗂️ Add and categorize transactions with ease<br>
+💳 Manage multiple accounts<br>
+📊 View detailed statistics for in-depth analysis<br>
+...and much more is yet to come!
 
-## Installing MoneyTracker
-
-More information is on the way.
+## Getting Started
 
 ### Prerequisites
 
-There are no prerequisites yet.
+Before you begin, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [Docker](https://www.docker.com/)
+- [Git](https://git-scm.com/)
 
 ### Installation
 
-There is currently no guide for installation.
+MoneyTracker is structured as a monorepo powered by [Turborepo](https://turbo.build/repo). For those who prefer not to use Docker, the setup process can be completed without it.
+
+To get started, simply follow the provided instructions to set up a local development environment.
+
+1. Clone the repository and install dependencies:
+
+```sh
+git clone https://github.com/pt232/money-tracker.git
+cd money-tracker
+npm install
+```
+
+2. Spin up all required infrastructure using Docker Compose:
+
+```sh
+# To be able to view logs
+npm run dev:start
+
+# Alternatively, if you prefer to run it in the background
+npm run dev:start -- -d
+```
 
 ## Technologies used
 
-- [React](https://reactjs.org/)
-- [Node.js](https://nodejs.org/)
-- [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [Cypress](https://www.cypress.io/)
-- [Docker](https://www.docker.com/)
-- [GitHub Actions](https://github.com/features/actions)
+### Frontend 
+
+- [React](https://reactjs.org/) - for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - for adding static typing and improving maintainability
+- [Vite](https://vitejs.dev/) - for fast and performant builds
+- [Vitest](https://vitest.dev/) - for unit and integration tests
+- [Cypress](https://www.cypress.io/) - for end-to-end testing
+
+### Backend
+
+- [Node.js](https://nodejs.org/) - as the server-side JavaScript runtime environment 
+- [Express.js](https://expressjs.com/) - for building the API
+- [MongoDB](https://www.mongodb.com/) - for the database
+- [TypeScript](https://www.typescriptlang.org/) - for adding static typing and improving maintainability
+- [Swagger UI](https://swagger.io/tools/swagger-ui/) - for the API documentation
+
+### Development and Deployment
+
+- [Turborepo](https://turbo.build/repo) - for the monorepo management
+- [Docker](https://www.docker.com/) - to serve the application in development and in production
+- [GitHub Actions](https://github.com/features/actions) - for workflow automations such as the CI/CD pipeline
 
 ## License
 
