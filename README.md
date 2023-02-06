@@ -78,7 +78,7 @@ npm run dev:start -- -d
 
 In addition to the technologies listed below, the design of the project was created using [Figma](https://www.figma.com/). It follows the principles of Brad Frost's Atomic Design framework. You can take a look at the design system of the MoneyTracker application [here](https://www.figma.com/file/qL8FNjTS0F2Jps9iPvaRSr/MoneyTracker?node-id=0%3A1&t=SwknO7cZihvmSKTM-1).
 
-### Frontend 
+### Frontend
 
 - [React](https://reactjs.org/) - for building user interfaces
 - [TypeScript](https://www.typescriptlang.org/) - for adding static typing and improving maintainability
@@ -88,7 +88,7 @@ In addition to the technologies listed below, the design of the project was crea
 
 ### Backend
 
-- [Node.js](https://nodejs.org/) - as the server-side JavaScript runtime environment 
+- [Node.js](https://nodejs.org/) - as the server-side JavaScript runtime environment
 - [Express.js](https://expressjs.com/) - for building the API
 - [TypeScript](https://www.typescriptlang.org/) - for adding static typing and improving maintainability
 - [SuperTest](https://github.com/ladjs/supertest) - for API testing in combination with Jest

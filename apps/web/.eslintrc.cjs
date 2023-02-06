@@ -16,7 +16,10 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    "react/react-in-jsx-scope": 0,
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
+    "import/prefer-default-export": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0,
+    "react/button-has-type": 0,
   },
 };
