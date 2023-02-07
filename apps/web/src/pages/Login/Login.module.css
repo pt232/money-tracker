@@ -34,7 +34,7 @@
   color: var(--primary-500);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   .header h1 {
     font-size: 3.4rem;
   }

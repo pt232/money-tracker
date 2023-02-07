@@ -16,8 +16,15 @@
   border-radius: 6px;
 }
 
+.error-message {
+  margin-top: 6px;
+  color: var(--error-500);
+  font-size: 1.4rem;
+}
+
 .info-message {
   align-self: flex-end;
   margin-top: 1.2rem;
   color: var(--primary-500);
+  font-size: 1.4rem;
 }
