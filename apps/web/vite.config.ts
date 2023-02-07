@@ -11,6 +11,11 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  css: {
+    modules: {
+      localsConvention: "camelCase",
+    },
+  },
   test: {
     globals: true,
     environment: "jsdom",
