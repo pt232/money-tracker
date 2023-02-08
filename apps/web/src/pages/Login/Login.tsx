@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LoginForm } from "./LoginForm";
+import { LoginForm } from "./Form/LoginForm";
 import logo from "@/assets/logo-light.svg";
 import styles from "./Login.module.css";
 
