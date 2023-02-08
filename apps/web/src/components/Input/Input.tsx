@@ -6,7 +6,7 @@ type InputProps = {
   label: string;
   type?: "text" | "email" | "password";
   required?: boolean;
-  errorMessage?: string;
+  errorMessages?: string[];
   infoMessage?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
@@ -14,7 +14,7 @@ type InputProps = {
 export function Input({
   id,
   label,
-  errorMessage,
+  errorMessages,
   infoMessage,
   type = "text",
   required = false,
@@ -32,7 +32,9 @@ export function Input({
         className={styles.inputField}
         onChange={onChange}
       />
-      {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+      {errorMessages && (
+        <p className={styles.errorMessage}>{errorMessages[0]}</p>
+      )}
       {infoMessage && <p className={styles.infoMessage}>{infoMessage}</p>}
     </div>
   );
