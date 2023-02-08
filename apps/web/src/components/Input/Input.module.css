@@ -16,6 +16,10 @@
   border-radius: 6px;
 }
 
+.input-field.input-field-error {
+  border-color: var(--error-500);
+}
+
 .error-message {
   margin-top: 6px;
   color: var(--error-500);

@@ -29,7 +29,10 @@ export function Input({
         type={type}
         id={id}
         required={required}
-        className={styles.inputField}
+        className={[
+          styles.inputField,
+          errorMessages && styles.inputFieldError,
+        ].join(" ")}
         onChange={onChange}
       />
       {errorMessages && (
