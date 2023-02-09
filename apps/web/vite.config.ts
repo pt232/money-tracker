@@ -3,6 +3,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
   resolve: {
@@ -14,6 +15,9 @@ export default defineConfig({
   css: {
     modules: {
       localsConvention: "camelCase",
+    },
+    postcss: {
+      plugins: [autoprefixer()],
     },
   },
   test: {
