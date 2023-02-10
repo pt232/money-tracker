@@ -1,23 +1,23 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import { Input } from "./Input";
+import Input from "./Input";
 
 describe("Input", () => {
   it("renders error message", () => {
-    const errorMessages = ["Must be a valid email"];
+    const errorMessage = "Must be a valid email";
 
     render(
       <Input
         id="email"
         label="Email"
         type="email"
-        errorMessages={errorMessages}
+        errorMessage={errorMessage}
         onChange={() => {}}
       />,
       { wrapper: BrowserRouter },
     );
 
-    expect(screen.getByText(errorMessages[0])).toBeInTheDocument();
+    expect(screen.getByText(errorMessage)).toBeInTheDocument();
   });
 
   it("renders info message", () => {
