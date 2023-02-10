@@ -2,12 +2,11 @@ import styles from "./Button.module.css";
 
 type ButtonProps = {
   label: string;
-  type?: "button" | "submit";
-};
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export function Button({ label, type = "button" }: ButtonProps) {
+export function Button({ label, ...props }: ButtonProps) {
   return (
-    <button type={type} className={styles.btn}>
+    <button className={styles.btn} {...props}>
       {label}
     </button>
   );
