@@ -48,7 +48,7 @@ export function LoginForm() {
           label="Email"
           type="email"
           required
-          errorMessages={errors?.fieldErrors?.email}
+          errorMessage={errors?.fieldErrors?.email?.at(0)}
         />
         <Input
           ref={passwordRef}
@@ -56,7 +56,7 @@ export function LoginForm() {
           type="password"
           required
           infoMessage="Forgot Password?"
-          errorMessages={errors?.fieldErrors?.password}
+          errorMessage={errors?.fieldErrors?.password?.at(0)}
         />
         <Button label="Log in" type="submit" />
       </form>

@@ -4,12 +4,12 @@ import styles from "./Input.module.css";
 
 type InputProps = {
   label: string;
-  errorMessages?: string[];
+  errorMessage?: string;
   infoMessage?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 function Input(
-  { label, errorMessages, infoMessage, ...props }: InputProps,
+  { label, errorMessage, infoMessage, ...props }: InputProps,
   ref: React.Ref<HTMLInputElement>,
 ) {
   const inputId = useId();
@@ -25,15 +25,15 @@ function Input(
         id={inputId}
         className={[
           styles.inputField,
-          errorMessages && styles.inputFieldError,
+          errorMessage && styles.inputFieldError,
         ].join(" ")}
-        aria-describedby={errorMessages?.length ? errorMessageId : undefined}
-        aria-invalid={errorMessages?.length ? "true" : "false"}
+        aria-describedby={errorMessage ? errorMessageId : undefined}
+        aria-invalid={errorMessage ? "true" : "false"}
         {...props}
       />
-      {errorMessages && (
+      {errorMessage && (
         <p id={errorMessageId} className={styles.errorMessage}>
-          {errorMessages[0]}
+          {errorMessage}
         </p>
       )}
       {infoMessage && (
