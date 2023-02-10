@@ -4,20 +4,15 @@ import styles from "./Input.module.css";
 
 type InputProps = {
   label: string;
-  type?: "text" | "email" | "password";
-  required?: boolean;
   errorMessages?: string[];
   infoMessage?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-};
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 export function Input({
   label,
   errorMessages,
   infoMessage,
-  type = "text",
-  required = false,
-  onChange,
+  ...props
 }: InputProps) {
   const inputId = useId();
   const errorMessageId = useId();
@@ -28,16 +23,14 @@ export function Input({
         {label}
       </label>
       <input
-        type={type}
         id={inputId}
-        required={required}
         className={[
           styles.inputField,
           errorMessages && styles.inputFieldError,
         ].join(" ")}
-        onChange={onChange}
-        aria-describedby={errorMessageId}
+        aria-describedby={errorMessages?.length ? errorMessageId : undefined}
         aria-invalid={errorMessages?.length ? "true" : "false"}
+        {...props}
       />
       {errorMessages && (
         <p id={errorMessageId} className={styles.errorMessage}>

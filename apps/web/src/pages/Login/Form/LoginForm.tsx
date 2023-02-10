@@ -41,7 +41,6 @@ export function LoginForm() {
     <Card>
       <form className={styles.loginForm} onSubmit={handleSubmit}>
         <Input
-          id="email"
           label="Email"
           type="email"
           required
@@ -49,7 +48,6 @@ export function LoginForm() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
-          id="password"
           label="Password"
           type="password"
           required
