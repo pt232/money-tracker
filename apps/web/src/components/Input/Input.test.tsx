@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import { Input } from "./Input";
 
 describe("Input", () => {
@@ -13,6 +14,7 @@ describe("Input", () => {
         errorMessages={errorMessages}
         onChange={() => {}}
       />,
+      { wrapper: BrowserRouter },
     );
 
     expect(screen.getByText(errorMessages[0])).toBeInTheDocument();
@@ -29,6 +31,7 @@ describe("Input", () => {
         infoMessage={infoMessage}
         onChange={() => {}}
       />,
+      { wrapper: BrowserRouter },
     );
 
     expect(screen.getByText(infoMessage)).toBeInTheDocument();
