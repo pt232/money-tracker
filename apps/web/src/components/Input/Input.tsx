@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useId } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Input.module.css";
 
 type InputProps = {
-  id: string;
   label: string;
   type?: "text" | "email" | "password";
   required?: boolean;
@@ -12,7 +12,6 @@ type InputProps = {
 };
 
 export function Input({
-  id,
   label,
   errorMessages,
   infoMessage,
@@ -20,25 +19,36 @@ export function Input({
   required = false,
   onChange,
 }: InputProps) {
+  const inputId = useId();
+  const errorMessageId = useId();
+
   return (
     <div className={styles.input}>
-      <label htmlFor={id} className={styles.inputLabel}>
+      <label htmlFor={inputId} className={styles.inputLabel}>
         {label}
       </label>
       <input
         type={type}
-        id={id}
+        id={inputId}
         required={required}
         className={[
           styles.inputField,
           errorMessages && styles.inputFieldError,
         ].join(" ")}
         onChange={onChange}
+        aria-describedby={errorMessageId}
+        aria-invalid={errorMessages?.length ? "true" : "false"}
       />
       {errorMessages && (
-        <p className={styles.errorMessage}>{errorMessages[0]}</p>
+        <p id={errorMessageId} className={styles.errorMessage}>
+          {errorMessages[0]}
+        </p>
       )}
-      {infoMessage && <p className={styles.infoMessage}>{infoMessage}</p>}
+      {infoMessage && (
+        <Link to="/" className={styles.infoMessage}>
+          {infoMessage}
+        </Link>
+      )}
     </div>
   );
 }
