@@ -8,12 +8,10 @@ type InputProps = {
   infoMessage?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
-export function Input({
-  label,
-  errorMessages,
-  infoMessage,
-  ...props
-}: InputProps) {
+function Input(
+  { label, errorMessages, infoMessage, ...props }: InputProps,
+  ref: React.Ref<HTMLInputElement>,
+) {
   const inputId = useId();
   const errorMessageId = useId();
 
@@ -23,6 +21,7 @@ export function Input({
         {label}
       </label>
       <input
+        ref={ref}
         id={inputId}
         className={[
           styles.inputField,
@@ -45,3 +44,5 @@ export function Input({
     </div>
   );
 }
+
+export default React.forwardRef(Input);

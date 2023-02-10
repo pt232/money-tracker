@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { Button } from "../../../components/Button/Button";
 import { Card } from "../../../components/Card/Card";
-import { Input } from "../../../components/Input/Input";
+import Input from "../../../components/Input/Input";
 import styles from "./LoginForm.module.css";
 
 type FlattenedErrors = z.inferFlattenedErrors<typeof FormData>;
@@ -17,8 +17,8 @@ const FormData = z.object({
 });
 
 export function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
   const [errors, setErrors] = useState<FlattenedErrors | null>(null);
   const navigate = useNavigate();
 
@@ -27,7 +27,10 @@ export function LoginForm() {
 
     setErrors(null);
 
-    const result = FormData.safeParse({ email, password });
+    const result = FormData.safeParse({
+      email: emailRef.current?.value,
+      password: passwordRef.current?.value,
+    });
 
     if (!result.success) {
       setErrors(result.error.flatten());
@@ -41,19 +44,19 @@ export function LoginForm() {
     <Card>
       <form className={styles.loginForm} onSubmit={handleSubmit}>
         <Input
+          ref={emailRef}
           label="Email"
           type="email"
           required
           errorMessages={errors?.fieldErrors?.email}
-          onChange={(e) => setEmail(e.target.value)}
         />
         <Input
+          ref={passwordRef}
           label="Password"
           type="password"
           required
           infoMessage="Forgot Password?"
           errorMessages={errors?.fieldErrors?.password}
-          onChange={(e) => setPassword(e.target.value)}
         />
         <Button label="Log in" type="submit" />
       </form>
