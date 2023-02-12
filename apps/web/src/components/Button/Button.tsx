@@ -4,7 +4,7 @@ type ButtonProps = {
   label: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export function Button({ label, ...props }: ButtonProps) {
+export default function Button({ label, ...props }: ButtonProps) {
   return (
     <button className={styles.btn} {...props}>
       {label}

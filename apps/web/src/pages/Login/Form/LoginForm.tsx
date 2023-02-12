@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
-import { Button } from "../../../components/Button/Button";
-import { Card } from "../../../components/Card/Card";
-import Input from "../../../components/Input/Input";
+import Button from "@/components/Button/Button";
+import Card from "@/components/Card/Card";
+import Input from "@/components/Input/Input";
 import styles from "./LoginForm.module.css";
 
 type FlattenedErrors = z.inferFlattenedErrors<typeof FormData>;
@@ -16,7 +16,7 @@ const FormData = z.object({
   password: z.string().min(1, { message: "Password is required" }),
 });
 
-export function LoginForm() {
+export default function LoginForm() {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const [errors, setErrors] = useState<FlattenedErrors | null>(null);

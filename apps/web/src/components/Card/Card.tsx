@@ -5,6 +5,6 @@ type CardProps = {
   children: ReactNode;
 };
 
-export function Card({ children }: CardProps) {
+export default function Card({ children }: CardProps) {
   return <div className={styles.card}>{children}</div>;
 }

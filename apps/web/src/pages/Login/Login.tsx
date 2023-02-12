@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { LoginForm } from "./Form/LoginForm";
+import LoginForm from "./Form/LoginForm";
 import logo from "@/assets/logo-light.svg";
 import styles from "./Login.module.css";
 
-export function Login() {
+export default function Login() {
   return (
     <main className={styles.container}>
       <header className={styles.header}>
