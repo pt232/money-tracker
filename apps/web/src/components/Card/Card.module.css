@@ -4,3 +4,8 @@
   border: 1px solid var(--neutral-200);
   border-radius: 6px;
 }
+
+.dark .card {
+  background-color: var(--neutral-800);
+  border-color: var(--neutral-700);
+}
