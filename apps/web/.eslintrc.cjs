@@ -11,10 +11,6 @@ module.exports = {
   plugins: ["react"],
   rules: {
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
-    "react/react-in-jsx-scope": 0,
-    "react/require-default-props": 0,
-    "react/button-has-type": 0,
-    "react/jsx-props-no-spreading": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -24,5 +20,9 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0,
+    "react/button-has-type": 0,
+    "react/jsx-props-no-spreading": 0,
   },
 };
