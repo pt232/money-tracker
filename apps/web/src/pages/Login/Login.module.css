@@ -14,9 +14,17 @@
   max-width: 35rem;
 }
 
+.container.dark {
+  background-color: var(--neutral-900);
+}
+
 .header {
   margin-bottom: 4rem;
   text-align: center;
+}
+
+.dark .header {
+  color: white;
 }
 
 .header img {
@@ -33,6 +41,10 @@
 .header a {
   color: var(--primary-500);
   transition: color 150 ease-in-out;
+}
+
+.dark header a {
+  color: var(--primary-400);
 }
 
 .header a:hover {

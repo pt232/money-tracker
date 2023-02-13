@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
 import LoginForm from "./LoginForm";
-import logo from "@/assets/logo-light.svg";
+import useDarkMode from "@/hooks/useDarkMode";
+import logoDark from "@/assets/logo-dark.svg";
+import logoLight from "@/assets/logo-light.svg";
 import styles from "./Login.module.css";
 
 export default function Login() {
+  const { isDarkMode } = useDarkMode();
+
   return (
-    <main className={styles.container}>
+    <main className={[styles.container, isDarkMode ? "dark" : ""].join(" ")}>
       <header className={styles.header}>
-        <img src={logo} alt="Logo" />
+        {isDarkMode ? (
+          <img src={logoDark} alt="Logo" />
+        ) : (
+          <img src={logoLight} alt="Logo" />
+        )}
         <h1>Log in with your account</h1>
         <p>
           Or <Link to="/">sign up now</Link> to track your expenses

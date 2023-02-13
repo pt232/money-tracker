@@ -25,7 +25,7 @@ function Input(
         id={inputId}
         className={[
           styles.inputField,
-          errorMessage && styles.inputFieldError,
+          errorMessage ? styles.inputFieldError : "",
         ].join(" ")}
         aria-describedby={errorMessage ? errorMessageId : undefined}
         aria-invalid={errorMessage ? "true" : "false"}

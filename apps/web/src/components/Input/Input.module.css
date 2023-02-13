@@ -8,16 +8,31 @@
   font-weight: 500;
 }
 
+.dark .input-label {
+  color: white;
+}
+
 .input-field {
   padding: 8px 6px;
+  color: var(--neutral-900);
   font-family: inherit;
   font-size: inherit;
   border: 1px solid var(--neutral-200);
   border-radius: 6px;
 }
 
+.dark .input-field {
+  background-color: var(--neutral-700);
+  color: white;
+  border-color: var(--neutral-600);
+}
+
 .input-field.input-field-error {
   border-color: var(--error-500);
+}
+
+.dark .input-field.input-field-error {
+  border-color: var(--error-400);
 }
 
 .error-message {
@@ -26,9 +41,17 @@
   font-size: 1.4rem;
 }
 
+.dark .error-message {
+  color: var(--error-400);
+}
+
 .info-message {
   align-self: flex-end;
   margin-top: 1.2rem;
   color: var(--primary-500);
   font-size: 1.4rem;
+}
+
+.dark .info-message {
+  color: var(--primary-400);
 }
