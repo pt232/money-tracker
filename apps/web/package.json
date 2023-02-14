@@ -44,7 +44,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "jsdom": "^21.1.0",
     "string-hash": "^1.1.3",
-    "stylelint": "^14.16.1",
+    "stylelint": "^15.1.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^29.0.0",
     "tsconfig": "*",
