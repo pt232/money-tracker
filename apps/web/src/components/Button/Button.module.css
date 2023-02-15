@@ -13,3 +13,7 @@
 .btn:hover {
   background-color: var(--primary-600);
 }
+
+.dark .btn:hover {
+  background-color: var(--primary-400);
+}

@@ -5,7 +5,6 @@
 
 .input-label {
   margin-bottom: 4px;
-  font-weight: 500;
 }
 
 .dark .input-label {
@@ -48,10 +47,5 @@
 .info-message {
   align-self: flex-end;
   margin-top: 1.2rem;
-  color: var(--primary-500);
   font-size: 1.4rem;
-}
-
-.dark .info-message {
-  color: var(--primary-400);
 }
