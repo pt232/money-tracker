@@ -9,7 +9,7 @@ export default function Login() {
   const { isDarkMode } = useDarkMode();
 
   return (
-    <main className={[styles.container, isDarkMode ? "dark" : ""].join(" ")}>
+    <main className={styles.container}>
       <header className={styles.header}>
         {isDarkMode ? (
           <img src={logoDark} alt="Logo" />

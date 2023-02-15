@@ -11,8 +11,20 @@
   color: var(--neutral-500);
 }
 
+.menu-btn > svg {
+  display: block;
+}
+
 .menu-btn:hover {
   color: var(--neutral-600);
+}
+
+.dark .menu-btn {
+  color: var(--neutral-400);
+}
+
+.dark .menu-btn:hover {
+  color: var(--neutral-300);
 }
 
 .mode-btn {
