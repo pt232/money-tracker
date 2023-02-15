@@ -1,0 +1,20 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 0;
+}
+
+.menu-btn {
+  place-self: center start;
+  color: var(--neutral-500);
+}
+
+.menu-btn:hover {
+  color: var(--neutral-600);
+}
+
+.mode-btn {
+  place-self: center end;
+}

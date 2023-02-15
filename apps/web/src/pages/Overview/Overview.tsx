@@ -1,5 +1,5 @@
-import Layout from "@/components/layouts";
+import RootLayout from "@/components/layouts/RootLayout";
 
 export default function Overview() {
-  return <Layout>Overview</Layout>;
+  return <RootLayout>Overview</RootLayout>;
 }

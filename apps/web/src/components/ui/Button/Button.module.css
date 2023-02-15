@@ -1,19 +1,40 @@
 .btn {
-  padding: 8px 6px;
-  background-color: var(--primary-500);
-  color: white;
-  font-family: inherit;
-  font-size: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
   border-radius: 6px;
-  border: none;
-  transition: background-color 150ms ease-in-out;
-  cursor: pointer;
 }
 
-.btn:hover {
+.btn-default {
+  color: white;
+  background-color: var(--primary-500);
+}
+
+.btn-default:hover {
   background-color: var(--primary-600);
 }
 
-.dark .btn:hover {
+.dark .btn-default:hover {
   background-color: var(--primary-400);
+}
+
+.btn-subtle {
+  background-color: white;
+  color: var(--neutral-500);
+  border: 1px solid var(--neutral-200);
+}
+
+.btn-subtle:hover {
+  background-color: var(--neutral-200);
+}
+
+.dark .btn-subtle {
+  background-color: var(--neutral-800);
+  color: var(--neutral-400);
+  border: 1px solid var(--neutral-700);
+}
+
+.dark .btn-subtle:hover {
+  background-color: var(--neutral-700);
 }

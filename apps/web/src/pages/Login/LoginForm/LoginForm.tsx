@@ -58,7 +58,7 @@ export default function LoginForm() {
           infoMessage="Forgot Password?"
           errorMessage={errors?.fieldErrors?.password?.at(0)}
         />
-        <Button label="Log in" type="submit" />
+        <Button type="submit">Log in</Button>
       </form>
     </Card>
   );
