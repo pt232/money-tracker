@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import classNames from "@/utils/classNames";
 import styles from "./Button.module.css";
 
 type ButtonProps = {
-  children: ReactNode;
+  children: React.ReactNode;
   variant?: ButtonVariant;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 

@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import PageHeader from "../PageHeader";
 import styles from "./RootLayout.module.css";
 
 type RootLayoutProps = {
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {

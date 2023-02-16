@@ -1,8 +1,7 @@
-import { ReactNode } from "react";
 import styles from "./Card.module.css";
 
 type CardProps = {
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 export default function Card({ children }: CardProps) {
