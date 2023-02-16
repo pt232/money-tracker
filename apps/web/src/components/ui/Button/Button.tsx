@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import classNames from "@/utils/classNames";
 import styles from "./Button.module.css";
 
 type ButtonProps = {
@@ -15,7 +16,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={[styles.btn, styles[`btn-${variant}`]].join(" ")}
+      className={classNames(styles.btn, styles[`btn-${variant}`])}
       {...props}
     >
       {children}

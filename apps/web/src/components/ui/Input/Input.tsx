@@ -1,5 +1,6 @@
 import React, { useId } from "react";
 import { Link } from "react-router-dom";
+import classNames from "@/utils/classNames";
 import styles from "./Input.module.css";
 
 type InputProps = {
@@ -23,12 +24,11 @@ function Input(
       <input
         ref={ref}
         id={inputId}
-        className={[
-          styles.inputField,
-          errorMessage ? styles.inputFieldError : "",
-        ].join(" ")}
+        className={classNames(styles.inputField, {
+          [styles.inputFieldError]: !!errorMessage,
+        })}
         aria-describedby={errorMessage ? errorMessageId : undefined}
-        aria-invalid={errorMessage ? "true" : "false"}
+        aria-invalid={!!errorMessage}
         {...props}
       />
       {errorMessage && (
