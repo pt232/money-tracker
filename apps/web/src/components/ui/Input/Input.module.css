@@ -1,17 +1,4 @@
 .input {
-  display: flex;
-  flex-direction: column;
-}
-
-.input-label {
-  margin-bottom: 4px;
-}
-
-.dark .input-label {
-  color: white;
-}
-
-.input-field {
   padding: 8px 6px;
   color: var(--neutral-900);
   font-family: inherit;
@@ -20,32 +7,16 @@
   border-radius: 6px;
 }
 
-.dark .input-field {
+.dark .input {
   background-color: var(--neutral-700);
   color: white;
   border-color: var(--neutral-600);
 }
 
-.input-field.input-field-error {
+.input.error {
   border-color: var(--error-500);
 }
 
-.dark .input-field.input-field-error {
+.dark .input.error {
   border-color: var(--error-400);
-}
-
-.error-message {
-  margin-top: 6px;
-  color: var(--error-500);
-  font-size: 1.4rem;
-}
-
-.dark .error-message {
-  color: var(--error-400);
-}
-
-.info-message {
-  align-self: flex-end;
-  margin-top: 1.2rem;
-  font-size: 1.4rem;
 }

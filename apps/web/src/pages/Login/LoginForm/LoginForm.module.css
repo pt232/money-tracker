@@ -4,3 +4,32 @@
   gap: 2.4rem;
   flex: 1;
 }
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 4px;
+}
+
+.dark .label {
+  color: white;
+}
+
+.error-message {
+  margin-top: 6px;
+  color: var(--error-500);
+  font-size: 1.4rem;
+}
+
+.dark .error-message {
+  color: var(--error-400);
+}
+
+.info-message {
+  align-self: flex-end;
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+}
