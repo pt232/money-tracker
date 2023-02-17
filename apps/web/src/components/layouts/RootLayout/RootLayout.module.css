@@ -7,3 +7,9 @@
 .dark .container {
   background-color: var(--neutral-900);
 }
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 3.2rem;
+  }
+}

@@ -7,6 +7,12 @@
   padding: 1.6rem 0;
 }
 
+.header h1 {
+  display: none;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
 .menu-btn {
   place-self: center start;
   color: var(--neutral-500);
@@ -36,6 +42,28 @@
   grid-column: span 2;
 }
 
-.search-input > input {
-  width: 100%;
+@media screen and (min-width: 1024px) {
+  .header {
+    grid-template-columns: 1fr minmax(0, 60rem) auto;
+    gap: 1.6rem;
+    padding: 2.4rem 0;
+  }
+
+  .header h1 {
+    display: block;
+    grid-column: 1;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .mode-btn {
+    grid-column: 3;
+  }
+
+  .search-input {
+    grid-row: 1;
+    grid-column: 2;
+  }
 }

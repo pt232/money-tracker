@@ -34,6 +34,10 @@ body {
   font-size: 1.6rem;
 }
 
+body.dark {
+  color: white;
+}
+
 a {
   color: var(--primary-500);
   text-decoration: none;

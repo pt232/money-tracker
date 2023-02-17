@@ -8,7 +8,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <div className={styles.container}>
-      <PageHeader />
+      <PageHeader title="Good Morning, John!" />
       <main>{children}</main>
     </div>
   );
