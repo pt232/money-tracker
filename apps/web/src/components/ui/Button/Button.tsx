@@ -1,12 +1,12 @@
 import classNames from "@/utils/classNames";
 import styles from "./Button.module.css";
 
+type ButtonVariant = "default" | "subtle";
+
 type ButtonProps = {
   children: React.ReactNode;
   variant?: ButtonVariant;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-type ButtonVariant = "default" | "subtle";
 
 export default function Button({
   children,
