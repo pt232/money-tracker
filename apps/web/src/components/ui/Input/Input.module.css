@@ -9,6 +9,8 @@
 
 .input:focus-within {
   outline: auto;
+  outline-width: 2px;
+  outline-style: solid;
 }
 
 .input-default,

@@ -19,6 +19,14 @@ export default function PageHeader({ title }: PageHeaderProps) {
 
       <h1>{title}</h1>
 
+      <div className={styles.searchInput}>
+        <Input
+          variant="subtle"
+          icon={<MdSearch />}
+          placeholder="Search for transactions, accounts, etc."
+        />
+      </div>
+
       <div className={styles.modeBtn}>
         <Button
           variant="subtle"
@@ -27,14 +35,6 @@ export default function PageHeader({ title }: PageHeaderProps) {
         >
           <MdOutlineLightMode />
         </Button>
-      </div>
-
-      <div className={styles.searchInput}>
-        <Input
-          variant="subtle"
-          icon={<MdSearch />}
-          placeholder="Search for transactions, accounts, etc."
-        />
       </div>
     </header>
   );
