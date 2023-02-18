@@ -1,4 +1,6 @@
+import useDarkMode from "@/hooks/useDarkMode";
 import PageHeader from "../PageHeader";
+import Sidebar from "../Sidebar";
 import styles from "./RootLayout.module.css";
 
 type RootLayoutProps = {
@@ -6,10 +8,18 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
   return (
     <div className={styles.container}>
-      <PageHeader title="Good Morning, John!" />
-      <main>{children}</main>
+      <Sidebar isDarkMode={isDarkMode} />
+      <div className={styles.pageContent}>
+        <PageHeader
+          title="Good Morning, John!"
+          toggleDarkMode={toggleDarkMode}
+        />
+        <main>{children}</main>
+      </div>
     </div>
   );
 }

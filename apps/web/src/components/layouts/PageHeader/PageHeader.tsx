@@ -1,16 +1,14 @@
 import { MdMenu, MdOutlineLightMode, MdSearch } from "react-icons/md";
-import useDarkMode from "@/hooks/useDarkMode";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import styles from "./PageHeader.module.css";
 
 type PageHeaderProps = {
   title: string;
+  toggleDarkMode: () => void;
 };
 
-export default function PageHeader({ title }: PageHeaderProps) {
-  const { toggleDarkMode } = useDarkMode();
-
+export default function PageHeader({ title, toggleDarkMode }: PageHeaderProps) {
   return (
     <header className={styles.header}>
       <button className={styles.menuBtn} aria-label="Open Menu">

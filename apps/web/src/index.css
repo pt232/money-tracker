@@ -29,12 +29,14 @@ html {
 }
 
 body {
+  background-color: var(--neutral-50);
   color: var(--neutral-900);
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
 }
 
 body.dark {
+  background-color: var(--neutral-900);
   color: white;
 }
 

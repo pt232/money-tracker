@@ -1,0 +1,35 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  width: 26rem;
+  height: 100%;
+  background-color: white;
+  border-right: 1px solid var(--neutral-200);
+}
+
+.dark .sidebar {
+  background-color: var(--neutral-800);
+  border-right: 1px solid var(--neutral-700);
+}
+
+.logo {
+  padding: 2.4rem;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.dark .logo {
+  border-bottom: 1px solid var(--neutral-700);
+}
+
+.logo > img {
+  width: 14rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    position: unset;
+    transform: unset;
+  }
+}
