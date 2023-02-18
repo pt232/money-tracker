@@ -12,7 +12,6 @@ Please describe the changes that you have made in this pull request. What proble
 
 - [ ] I have written tests for my changes
 - [ ] I have tested my changes locally
-- [ ] I have updated the documentation, if necessary
 
 ## Screenshots
 
