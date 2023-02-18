@@ -14,7 +14,7 @@
   max-width: 35rem;
 }
 
-.container.dark {
+.dark .container {
   background-color: var(--neutral-900);
 }
 

@@ -1,46 +1,27 @@
-import React, { useId } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import classNames from "@/utils/classNames";
 import styles from "./Input.module.css";
 
+type InputVariant = "default" | "subtle";
+
 type InputProps = {
-  label: string;
-  errorMessage?: string;
-  infoMessage?: string;
+  variant?: InputVariant;
+  icon?: React.ReactNode;
+  hasError?: boolean;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 function Input(
-  { label, errorMessage, infoMessage, ...props }: InputProps,
+  { variant = "default", icon, hasError, ...props }: InputProps,
   ref: React.Ref<HTMLInputElement>,
 ) {
-  const inputId = useId();
-  const errorMessageId = useId();
-
   return (
-    <div className={styles.input}>
-      <label htmlFor={inputId} className={styles.inputLabel}>
-        {label}
-      </label>
-      <input
-        ref={ref}
-        id={inputId}
-        className={[
-          styles.inputField,
-          errorMessage ? styles.inputFieldError : "",
-        ].join(" ")}
-        aria-describedby={errorMessage ? errorMessageId : undefined}
-        aria-invalid={errorMessage ? "true" : "false"}
-        {...props}
-      />
-      {errorMessage && (
-        <p id={errorMessageId} className={styles.errorMessage}>
-          {errorMessage}
-        </p>
-      )}
-      {infoMessage && (
-        <Link to="/" className={styles.infoMessage}>
-          {infoMessage}
-        </Link>
-      )}
+    <div
+      className={classNames(styles.input, styles[`input-${variant}`], {
+        [styles.error]: hasError || false,
+      })}
+    >
+      {icon && <div className={styles.inputIcon}>{icon}</div>}
+      <input ref={ref} className={styles.inputField} {...props} />
     </div>
   );
 }

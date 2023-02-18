@@ -1,51 +1,82 @@
 .input {
   display: flex;
-  flex-direction: column;
-}
-
-.input-label {
-  margin-bottom: 4px;
-}
-
-.dark .input-label {
-  color: white;
-}
-
-.input-field {
-  padding: 8px 6px;
-  color: var(--neutral-900);
-  font-family: inherit;
-  font-size: inherit;
-  border: 1px solid var(--neutral-200);
+  align-items: center;
+  gap: 6px;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 6px;
 }
 
-.dark .input-field {
+.input:focus-within {
+  outline: auto;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.input-default,
+.input-subtle {
+  border-color: var(--neutral-200);
+}
+
+.dark .input-default {
   background-color: var(--neutral-700);
-  color: white;
   border-color: var(--neutral-600);
 }
 
-.input-field.input-field-error {
+.dark .input-subtle {
+  background-color: var(--neutral-800);
+  border-color: var(--neutral-700);
+}
+
+.input.error {
   border-color: var(--error-500);
 }
 
-.dark .input-field.input-field-error {
+.dark .input.error {
   border-color: var(--error-400);
 }
 
-.error-message {
-  margin-top: 6px;
-  color: var(--error-500);
-  font-size: 1.4rem;
+.input-icon {
+  padding: 8px 0 8px 10px;
+  color: var(--neutral-500);
 }
 
-.dark .error-message {
-  color: var(--error-400);
+.dark .input-icon {
+  color: var(--neutral-400);
 }
 
-.info-message {
-  align-self: flex-end;
-  margin-top: 1.2rem;
-  font-size: 1.4rem;
+.input-icon > svg {
+  display: block;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px 6px;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: var(--neutral-500);
+}
+
+.input-field:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
+.input-default .input-field,
+.input-subtle .input-field {
+  color: var(--neutral-900);
+}
+
+.dark .input-default .input-field,
+.dark .input-subtle .input-field {
+  color: white;
+}
+
+.dark .input-subtle .input-field::placeholder {
+  color: var(--neutral-400);
 }

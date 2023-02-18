@@ -1,12 +1,12 @@
-import { ReactNode } from "react";
+import classNames from "@/utils/classNames";
 import styles from "./Button.module.css";
 
+type ButtonVariant = "default" | "subtle";
+
 type ButtonProps = {
-  children: ReactNode;
+  children: React.ReactNode;
   variant?: ButtonVariant;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-type ButtonVariant = "default" | "subtle";
 
 export default function Button({
   children,
@@ -15,7 +15,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={[styles.btn, styles[`btn-${variant}`]].join(" ")}
+      className={classNames(styles.btn, styles[`btn-${variant}`])}
       {...props}
     >
       {children}

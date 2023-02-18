@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
@@ -20,6 +20,8 @@ export default function LoginForm() {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const [errors, setErrors] = useState<FlattenedErrors | null>(null);
+  const isEmailError = !!errors?.fieldErrors.email?.at(0);
+  const isPasswordError = !!errors?.fieldErrors.password?.at(0);
   const navigate = useNavigate();
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -43,21 +45,49 @@ export default function LoginForm() {
   return (
     <Card>
       <form className={styles.loginForm} onSubmit={handleSubmit}>
-        <Input
-          ref={emailRef}
-          label="Email"
-          type="email"
-          required
-          errorMessage={errors?.fieldErrors?.email?.at(0)}
-        />
-        <Input
-          ref={passwordRef}
-          label="Password"
-          type="password"
-          required
-          infoMessage="Forgot Password?"
-          errorMessage={errors?.fieldErrors?.password?.at(0)}
-        />
+        <div className={styles.inputContainer}>
+          <label htmlFor="email" className={styles.label}>
+            Email
+          </label>
+          <Input
+            id="email"
+            ref={emailRef}
+            type="email"
+            required
+            aria-invalid={isEmailError}
+            aria-describedby={isEmailError ? "email-error" : undefined}
+            hasError={isEmailError}
+          />
+          {isEmailError && (
+            <p id="email-error" className={styles.errorMessage}>
+              {errors?.fieldErrors.email?.at(0)}
+            </p>
+          )}
+        </div>
+
+        <div className={styles.inputContainer}>
+          <label htmlFor="password" className={styles.label}>
+            Password
+          </label>
+          <Input
+            id="password"
+            ref={passwordRef}
+            type="password"
+            required
+            aria-invalid={isPasswordError}
+            aria-describedby={isPasswordError ? "password-error" : undefined}
+            hasError={isPasswordError}
+          />
+          {isPasswordError && (
+            <p id="password-error" className={styles.errorMessage}>
+              {errors?.fieldErrors.password?.at(0)}
+            </p>
+          )}
+          <Link to="/" className={styles.infoMessage}>
+            Forgot Password?
+          </Link>
+        </div>
+
         <Button type="submit">Log in</Button>
       </form>
     </Card>

@@ -1,4 +1,4 @@
-import { renderHook } from "@testing-library/react";
+import { act, renderHook } from "@testing-library/react";
 import useDarkMode from "../useDarkMode";
 
 const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
@@ -18,16 +18,28 @@ describe("useDarkMode", () => {
   });
 
   it("returns local storage value", () => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, "true");
+    localStorage.setItem(LOCAL_STORAGE_KEY, "false");
 
     const { result } = renderHook(useDarkMode);
 
-    expect(result.current.isDarkMode).toBe(true);
+    expect(result.current.isDarkMode).toBe(false);
   });
 
   it("returns preferred system value", () => {
     const { result } = renderHook(useDarkMode);
 
     expect(result.current.isDarkMode).toBe(true);
+  });
+
+  it("toggles dark mode", () => {
+    const { result } = renderHook(useDarkMode);
+
+    expect(result.current.isDarkMode).toBe(true);
+
+    act(() => {
+      result.current.toggleDarkMode();
+    });
+
+    expect(result.current.isDarkMode).toBe(false);
   });
 });
