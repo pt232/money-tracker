@@ -45,7 +45,7 @@
 
 @media screen and (min-width: 1024px) {
   .header {
-    grid-template-columns: 1fr minmax(0, 60rem) auto;
+    grid-template-columns: 1fr minmax(0, 48rem) auto;
     gap: 1.6rem;
     padding: 2.4rem 0;
   }

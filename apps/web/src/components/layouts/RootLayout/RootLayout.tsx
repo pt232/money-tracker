@@ -4,7 +4,7 @@ import Sidebar from "../Sidebar";
 import styles from "./RootLayout.module.css";
 
 type RootLayoutProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
