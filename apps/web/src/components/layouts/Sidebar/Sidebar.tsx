@@ -62,7 +62,7 @@ export default function Sidebar({
             <SidebarLink to="/categories" icon={<MdOutlineCategory />}>
               Categories
             </SidebarLink>
-            <SidebarLink to="/statistics" icon={<MdOutlineInsertChart />}>
+            <SidebarLink to="/analytics" icon={<MdOutlineInsertChart />}>
               Analytics
             </SidebarLink>
             <SidebarLink to="/settings" icon={<MdOutlineSettings />}>

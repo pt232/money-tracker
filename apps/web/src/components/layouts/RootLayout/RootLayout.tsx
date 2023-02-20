@@ -6,9 +6,10 @@ import styles from "./RootLayout.module.css";
 
 type RootLayoutProps = {
   children?: React.ReactNode;
+  title: string;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children, title }: RootLayoutProps) {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   const [sidebarActive, setSidebarActive] = useState<boolean>(false);
 
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       />
       <div className={styles.pageContent}>
         <PageHeader
-          title="Good Morning, John!"
+          title={title}
           setSidebarActive={setSidebarActive}
           toggleDarkMode={toggleDarkMode}
         />
