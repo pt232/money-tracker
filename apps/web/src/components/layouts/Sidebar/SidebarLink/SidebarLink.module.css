@@ -13,34 +13,37 @@
   color: var(--neutral-400);
 }
 
-.sidebar-link-active {
+.active {
   background-color: var(--neutral-100);
-  color: var(--primary-500);
+  color: var(--neutral-600);
 }
 
-.dark .sidebar-link-active {
+.dark .active {
   background-color: var(--neutral-700);
-  color: var(--primary-400);
+  color: white;
+}
+
+.active .icon,
+.dark .active .icon {
+  color: var(--primary-500);
 }
 
 .sidebar-link:hover {
   background-color: var(--neutral-100);
+  color: var(--neutral-600);
   text-decoration: none;
 }
 
 .dark .sidebar-link:hover {
   background-color: var(--neutral-700);
-  color: var(--primary-400);
+  color: white;
 }
 
-.sidebar-link:hover .link-icon {
+.sidebar-link:hover .icon,
+.dark .sidebar-link:hover .icon {
   color: var(--primary-500);
 }
 
-.dark .sidebar-link:hover .link-icon {
-  color: var(--primary-400);
-}
-
-.link-icon > svg {
+.icon > svg {
   display: block;
 }

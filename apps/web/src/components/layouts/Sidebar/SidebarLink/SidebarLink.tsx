@@ -14,11 +14,11 @@ export default function SidebarLink({ children, icon, to }: SidebarLinkProps) {
         to={to}
         className={({ isActive }) =>
           isActive
-            ? `${styles.sidebarLinkActive} ${styles.sidebarLink}`
+            ? `${styles.active} ${styles.sidebarLink}`
             : styles.sidebarLink
         }
       >
-        {icon && <div className={styles.linkIcon}>{icon}</div>}
+        {icon && <div className={styles.icon}>{icon}</div>}
         <div>{children}</div>
       </NavLink>
     </li>
