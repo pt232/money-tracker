@@ -3,7 +3,9 @@
   top: 0;
   left: 0;
   transform: translateX(-100%);
-  width: 26rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 26rem;
   height: 100%;
   background-color: white;
   border-right: 1px solid var(--neutral-200);
@@ -35,6 +37,11 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.account-item {
+  padding: 2.4rem;
+  margin-top: auto;
 }
 
 @media screen and (min-width: 1024px) {

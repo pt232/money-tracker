@@ -1,0 +1,42 @@
+.account-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.account-image {
+  min-width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.account-info {
+  margin-left: 1.2rem;
+  margin-right: 1rem;
+}
+
+.account-info > span {
+  display: block;
+}
+
+.account-info > span:first-child {
+  font-weight: 500;
+}
+
+.account-info > span:last-child {
+  color: var(--neutral-500);
+  font-size: 1.4rem;
+}
+
+.dark .account-info > span:last-child {
+  color: var(--neutral-400);
+}
+
+.account-expand {
+  color: var(--neutral-500);
+}
+
+.dark .account-expand {
+  color: white;
+}

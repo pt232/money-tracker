@@ -7,6 +7,7 @@ import {
   MdOutlineSettings,
 } from "react-icons/md";
 import SidebarLink from "./SidebarLink";
+import AccountItem from "@/components/ui/AccountItem";
 import logoDark from "@/assets/logo-dark.svg";
 import logoLight from "@/assets/logo-light.svg";
 import styles from "./Sidebar.module.css";
@@ -25,6 +26,7 @@ export default function Sidebar({ isDarkMode }: SidebarProps) {
           <img src={logoLight} alt="Logo" />
         )}
       </div>
+
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <SidebarLink to="/" icon={<MdDashboard />}>
@@ -47,6 +49,10 @@ export default function Sidebar({ isDarkMode }: SidebarProps) {
           </SidebarLink>
         </ul>
       </nav>
+
+      <div className={styles.accountItem}>
+        <AccountItem />
+      </div>
     </div>
   );
 }
