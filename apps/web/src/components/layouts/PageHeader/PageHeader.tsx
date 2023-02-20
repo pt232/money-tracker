@@ -5,13 +5,22 @@ import styles from "./PageHeader.module.css";
 
 type PageHeaderProps = {
   title: string;
+  setSidebarActive: React.Dispatch<React.SetStateAction<boolean>>;
   toggleDarkMode: () => void;
 };
 
-export default function PageHeader({ title, toggleDarkMode }: PageHeaderProps) {
+export default function PageHeader({
+  title,
+  setSidebarActive,
+  toggleDarkMode,
+}: PageHeaderProps) {
   return (
     <header className={styles.header}>
-      <button className={styles.menuBtn} aria-label="Open Menu">
+      <button
+        className={styles.menuBtn}
+        aria-label="Open Menu"
+        onClick={() => setSidebarActive((prev) => !prev)}
+      >
         <MdMenu size="28" />
       </button>
 
