@@ -31,6 +31,7 @@ export default function PageHeader({
           variant="subtle"
           icon={<MdSearch />}
           placeholder="Search for transactions, accounts, etc."
+          aria-label="Search for transactions, accounts, etc."
         />
       </div>
 
