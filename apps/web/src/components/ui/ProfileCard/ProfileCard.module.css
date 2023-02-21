@@ -1,42 +1,42 @@
-.account-item {
+.profile-card {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.account-image {
+.profile-image {
   min-width: 4rem;
   height: 4rem;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.account-info {
+.profile-info {
   margin-left: 1.2rem;
   margin-right: 1rem;
 }
 
-.account-info > span {
+.profile-info > span {
   display: block;
 }
 
-.account-info > span:first-child {
+.profile-info > span:first-child {
   font-weight: 500;
 }
 
-.account-info > span:last-child {
+.profile-info > span:last-child {
   color: var(--neutral-500);
   font-size: 1.4rem;
 }
 
-.dark .account-info > span:last-child {
+.dark .profile-info > span:last-child {
   color: var(--neutral-400);
 }
 
-.account-expand {
+.profile-expand {
   color: var(--neutral-500);
 }
 
-.dark .account-expand {
+.dark .profile-expand {
   color: white;
 }
