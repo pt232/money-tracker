@@ -1,0 +1,28 @@
+.container {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.icon {
+  color: var(--neutral-300);
+}
+
+.dark .icon {
+  color: var(--neutral-700);
+}
+
+.title {
+  margin: 8px 0 6px;
+  font-weight: 500;
+  pointer-events: initial;
+}
+
+.home-link {
+  pointer-events: initial;
+}

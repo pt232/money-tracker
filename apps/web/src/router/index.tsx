@@ -7,6 +7,7 @@ import Login from "@/pages/Login";
 import Overview from "@/pages/Overview";
 import Settings from "@/pages/Settings";
 import Transactions from "@/pages/Transactions";
+import NotFound from "@/pages/NotFound";
 
 export default createBrowserRouter([
   {
@@ -53,6 +54,13 @@ export default createBrowserRouter([
         element: <Settings />,
         handle: {
           title: "Settings",
+        },
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+        handle: {
+          title: "Not Found",
         },
       },
     ],
