@@ -5,9 +5,15 @@ type SidebarLinkProps = {
   children: React.ReactNode;
   icon: React.ReactNode;
   to: To;
+  setSidebarActive: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function SidebarLink({ children, icon, to }: SidebarLinkProps) {
+export default function SidebarLink({
+  children,
+  icon,
+  to,
+  setSidebarActive,
+}: SidebarLinkProps) {
   return (
     <li>
       <NavLink
@@ -17,6 +23,7 @@ export default function SidebarLink({ children, icon, to }: SidebarLinkProps) {
             ? `${styles.active} ${styles.sidebarLink}`
             : styles.sidebarLink
         }
+        onClick={() => setSidebarActive(false)}
       >
         {icon && <div className={styles.icon}>{icon}</div>}
         <div>{children}</div>

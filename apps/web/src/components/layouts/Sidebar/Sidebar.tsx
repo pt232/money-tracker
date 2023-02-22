@@ -50,22 +50,46 @@ export default function Sidebar({
 
         <nav className={styles.nav}>
           <ul className={styles.navList}>
-            <SidebarLink to="/" icon={<MdDashboard />}>
+            <SidebarLink
+              to="/"
+              icon={<MdDashboard />}
+              setSidebarActive={setSidebarActive}
+            >
               Overview
             </SidebarLink>
-            <SidebarLink to="/transactions" icon={<MdSyncAlt />}>
+            <SidebarLink
+              to="/transactions"
+              icon={<MdSyncAlt />}
+              setSidebarActive={setSidebarActive}
+            >
               Transactions
             </SidebarLink>
-            <SidebarLink to="/accounts" icon={<MdCreditCard />}>
+            <SidebarLink
+              to="/accounts"
+              icon={<MdCreditCard />}
+              setSidebarActive={setSidebarActive}
+            >
               Accounts
             </SidebarLink>
-            <SidebarLink to="/categories" icon={<MdOutlineCategory />}>
+            <SidebarLink
+              to="/categories"
+              icon={<MdOutlineCategory />}
+              setSidebarActive={setSidebarActive}
+            >
               Categories
             </SidebarLink>
-            <SidebarLink to="/analytics" icon={<MdOutlineInsertChart />}>
+            <SidebarLink
+              to="/analytics"
+              icon={<MdOutlineInsertChart />}
+              setSidebarActive={setSidebarActive}
+            >
               Analytics
             </SidebarLink>
-            <SidebarLink to="/settings" icon={<MdOutlineSettings />}>
+            <SidebarLink
+              to="/settings"
+              icon={<MdOutlineSettings />}
+              setSidebarActive={setSidebarActive}
+            >
               Settings
             </SidebarLink>
           </ul>
