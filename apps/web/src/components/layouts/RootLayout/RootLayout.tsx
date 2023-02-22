@@ -1,17 +1,15 @@
 import { useState } from "react";
+import { Outlet, RouteObject, useMatches } from "react-router-dom";
 import useDarkMode from "@/hooks/useDarkMode";
 import PageHeader from "../PageHeader";
 import Sidebar from "../Sidebar";
 import styles from "./RootLayout.module.css";
 
-type RootLayoutProps = {
-  children?: React.ReactNode;
-  title: string;
-};
-
-export default function RootLayout({ children, title }: RootLayoutProps) {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+export default function RootLayout() {
+  const matches: RouteObject[] = useMatches();
   const [sidebarActive, setSidebarActive] = useState<boolean>(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const title = matches.find((match) => !!match.handle?.title)?.handle?.title;
 
   return (
     <div className={styles.container}>
@@ -26,7 +24,9 @@ export default function RootLayout({ children, title }: RootLayoutProps) {
           setSidebarActive={setSidebarActive}
           toggleDarkMode={toggleDarkMode}
         />
-        <main>{children}</main>
+        <main>
+          <Outlet />
+        </main>
       </div>
     </div>
   );

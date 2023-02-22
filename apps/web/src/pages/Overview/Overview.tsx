@@ -1,5 +1,3 @@
-import RootLayout from "@/components/layouts/RootLayout";
-
 export default function Overview() {
-  return <RootLayout title="Overview" />;
+  return <div>Overview</div>;
 }
