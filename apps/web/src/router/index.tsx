@@ -15,7 +15,7 @@ export default createBrowserRouter([
     element: <RootLayout />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Overview />,
         handle: {
           title: "Overview",
