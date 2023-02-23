@@ -1,16 +1,23 @@
-import { MdMenu, MdOutlineLightMode, MdSearch } from "react-icons/md";
+import {
+  MdMenu,
+  MdOutlineDarkMode,
+  MdOutlineLightMode,
+  MdSearch,
+} from "react-icons/md";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import styles from "./PageHeader.module.css";
 
 type PageHeaderProps = {
   title: string;
+  isDarkMode: boolean;
   setSidebarActive: React.Dispatch<React.SetStateAction<boolean>>;
   toggleDarkMode: () => void;
 };
 
 export default function PageHeader({
   title,
+  isDarkMode,
   setSidebarActive,
   toggleDarkMode,
 }: PageHeaderProps) {
@@ -41,7 +48,7 @@ export default function PageHeader({
           aria-label="Use Dark Mode"
           onClick={toggleDarkMode}
         >
-          <MdOutlineLightMode />
+          {isDarkMode ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
         </Button>
       </div>
     </header>

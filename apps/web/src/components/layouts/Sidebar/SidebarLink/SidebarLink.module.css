@@ -16,6 +16,7 @@
 .active {
   background-color: var(--neutral-100);
   color: var(--neutral-600);
+  transition: none;
 }
 
 .dark .active {

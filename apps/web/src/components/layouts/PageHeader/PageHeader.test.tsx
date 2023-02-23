@@ -8,6 +8,7 @@ describe("PageHeader", () => {
     render(
       <PageHeader
         title={title}
+        isDarkMode
         setSidebarActive={() => {}}
         toggleDarkMode={() => {}}
       />,
@@ -23,6 +24,7 @@ describe("PageHeader", () => {
     render(
       <PageHeader
         title=""
+        isDarkMode
         setSidebarActive={setSidebarActive}
         toggleDarkMode={toggleDarkMode}
       />,

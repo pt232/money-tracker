@@ -21,6 +21,7 @@ export default function RootLayout() {
       <div className={styles.pageContent}>
         <PageHeader
           title={title}
+          isDarkMode={isDarkMode}
           setSidebarActive={setSidebarActive}
           toggleDarkMode={toggleDarkMode}
         />
