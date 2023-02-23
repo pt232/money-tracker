@@ -1,14 +1,11 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import userEvent from "@testing-library/user-event";
+import { screen } from "@testing-library/react";
+import renderWithRouter from "@/utils/renderWithRouter";
 import Sidebar from "./Sidebar";
 
 describe("Sidebar", () => {
   it("renders light logo when isDarkMode is true", () => {
-    render(
-      <MemoryRouter initialEntries={["/"]}>
-        <Sidebar isActive isDarkMode setSidebarActive={() => {}} />
-      </MemoryRouter>,
+    renderWithRouter(
+      <Sidebar isActive isDarkMode setSidebarActive={() => {}} />,
     );
 
     const logo: HTMLImageElement = screen.getByAltText("Logo");
@@ -16,10 +13,8 @@ describe("Sidebar", () => {
   });
 
   it("renders dark logo when isDarkMode is false", () => {
-    render(
-      <MemoryRouter initialEntries={["/"]}>
-        <Sidebar isActive isDarkMode={false} setSidebarActive={() => {}} />
-      </MemoryRouter>,
+    renderWithRouter(
+      <Sidebar isActive isDarkMode={false} setSidebarActive={() => {}} />,
     );
 
     const logo: HTMLImageElement = screen.getByAltText("Logo");
@@ -28,16 +23,12 @@ describe("Sidebar", () => {
 
   it("calls setSidebarActive function on close button", async () => {
     const setSidebarActive = vi.fn();
-    const user = userEvent.setup();
-
-    render(
-      <MemoryRouter initialEntries={["/"]}>
-        <Sidebar
-          isActive
-          isDarkMode={false}
-          setSidebarActive={setSidebarActive}
-        />
-      </MemoryRouter>,
+    const { user } = renderWithRouter(
+      <Sidebar
+        isActive
+        isDarkMode={false}
+        setSidebarActive={setSidebarActive}
+      />,
     );
 
     await user.click(
