@@ -23,15 +23,16 @@ export default function PageHeader({
 }: PageHeaderProps) {
   return (
     <header className={styles.header}>
-      <button
-        className={styles.menuBtn}
-        aria-label="Open Menu"
-        onClick={() => setSidebarActive((prev) => !prev)}
-      >
-        <MdMenu size="28" />
-      </button>
-
-      <h1>{title}</h1>
+      <div className={styles.titleContainer}>
+        <button
+          className={styles.menuBtn}
+          aria-label="Open Menu"
+          onClick={() => setSidebarActive((prev) => !prev)}
+        >
+          <MdMenu size="28" />
+        </button>
+        <h1>{title}</h1>
+      </div>
 
       <div className={styles.searchInput}>
         <Input
