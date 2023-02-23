@@ -15,6 +15,7 @@
 
 .input-default,
 .input-subtle {
+  background-color: white;
   border-color: var(--neutral-200);
 }
 

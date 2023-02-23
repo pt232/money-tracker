@@ -1,18 +1,10 @@
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { MemoryRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
+import renderWithRouter from "@/utils/renderWithRouter";
 import LoginForm from "./LoginForm";
 
 describe("LoginForm", () => {
   it("displays error messages when form data is invalid", async () => {
-    const route = "/login";
-    const user = userEvent.setup();
-
-    render(
-      <MemoryRouter initialEntries={[route]}>
-        <LoginForm />
-      </MemoryRouter>,
-    );
+    const { user } = renderWithRouter(<LoginForm />, ["/login"]);
 
     await user.type(screen.getByLabelText("Email"), "test@example");
     await user.type(screen.getByLabelText("Password"), "password");
@@ -22,14 +14,7 @@ describe("LoginForm", () => {
   });
 
   it("navigates to the home page when form data is valid", async () => {
-    const route = "/login";
-    const user = userEvent.setup();
-
-    render(
-      <MemoryRouter initialEntries={[route]}>
-        <LoginForm />
-      </MemoryRouter>,
-    );
+    const { user } = renderWithRouter(<LoginForm />, ["/login"]);
 
     await user.type(screen.getByLabelText("Email"), "test@example.com");
     await user.type(screen.getByLabelText("Password"), "password");

@@ -1,29 +1,46 @@
-import { MdMenu, MdOutlineLightMode, MdSearch } from "react-icons/md";
-import useDarkMode from "@/hooks/useDarkMode";
+import {
+  MdMenu,
+  MdOutlineDarkMode,
+  MdOutlineLightMode,
+  MdSearch,
+} from "react-icons/md";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import styles from "./PageHeader.module.css";
 
 type PageHeaderProps = {
   title: string;
+  isDarkMode: boolean;
+  setSidebarActive: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleDarkMode: () => void;
 };
 
-export default function PageHeader({ title }: PageHeaderProps) {
-  const { toggleDarkMode } = useDarkMode();
-
+export default function PageHeader({
+  title,
+  isDarkMode,
+  setSidebarActive,
+  toggleDarkMode,
+}: PageHeaderProps) {
   return (
     <header className={styles.header}>
-      <button className={styles.menuBtn} aria-label="Open Menu">
-        <MdMenu size="28" />
-      </button>
-
-      <h1>{title}</h1>
+      <div className={styles.titleContainer}>
+        <button
+          className={styles.menuBtn}
+          aria-label="Open Menu"
+          data-testid="menu-btn"
+          onClick={() => setSidebarActive((prev) => !prev)}
+        >
+          <MdMenu size="28" />
+        </button>
+        <h1>{title}</h1>
+      </div>
 
       <div className={styles.searchInput}>
         <Input
           variant="subtle"
           icon={<MdSearch />}
           placeholder="Search for transactions, accounts, etc."
+          aria-label="Search for transactions, accounts, etc."
         />
       </div>
 
@@ -31,9 +48,10 @@ export default function PageHeader({ title }: PageHeaderProps) {
         <Button
           variant="subtle"
           aria-label="Use Dark Mode"
+          data-testid="dark-mode-btn"
           onClick={toggleDarkMode}
         >
-          <MdOutlineLightMode />
+          {isDarkMode ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
         </Button>
       </div>
     </header>

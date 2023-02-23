@@ -1,0 +1,42 @@
+.profile-card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-image {
+  min-width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  margin-left: 1.2rem;
+  margin-right: 1rem;
+}
+
+.profile-info > span {
+  display: block;
+}
+
+.profile-info > span:first-child {
+  font-weight: 500;
+}
+
+.profile-info > span:last-child {
+  color: var(--neutral-500);
+  font-size: 1.4rem;
+}
+
+.dark .profile-info > span:last-child {
+  color: var(--neutral-400);
+}
+
+.profile-expand {
+  color: var(--neutral-500);
+}
+
+.dark .profile-expand {
+  color: white;
+}

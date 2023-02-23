@@ -6,4 +6,8 @@ Cypress.Commands.add("login", (email: string, password: string) => {
   cy.get("button[type='submit']").click();
 });
 
+Cypress.Commands.add("getByData", (selector: string) => {
+  return cy.get(`[data-testid='${selector}']`);
+});
+
 export {};

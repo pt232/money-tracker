@@ -1,0 +1,50 @@
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 8px 1rem;
+  color: var(--neutral-500);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 150ms ease-in-out;
+}
+
+.dark .sidebar-link {
+  color: var(--neutral-400);
+}
+
+.active {
+  background-color: var(--neutral-100);
+  color: var(--neutral-600);
+  transition: none;
+}
+
+.dark .active {
+  background-color: var(--neutral-700);
+  color: white;
+}
+
+.active .icon,
+.dark .active .icon {
+  color: var(--primary-500);
+}
+
+.sidebar-link:hover {
+  background-color: var(--neutral-100);
+  color: var(--neutral-600);
+  text-decoration: none;
+}
+
+.dark .sidebar-link:hover {
+  background-color: var(--neutral-700);
+  color: white;
+}
+
+.sidebar-link:hover .icon,
+.dark .sidebar-link:hover .icon {
+  color: var(--primary-500);
+}
+
+.icon > svg {
+  display: block;
+}
