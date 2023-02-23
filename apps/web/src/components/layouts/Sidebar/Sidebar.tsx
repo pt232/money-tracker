@@ -49,7 +49,7 @@ export default function Sidebar({
         </div>
 
         <nav className={styles.nav}>
-          <ul className={styles.navList}>
+          <ul className={styles.navList} data-testid="nav-list">
             <SidebarLink
               to="/"
               icon={<MdDashboard />}

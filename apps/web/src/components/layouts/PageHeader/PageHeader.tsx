@@ -27,6 +27,7 @@ export default function PageHeader({
         <button
           className={styles.menuBtn}
           aria-label="Open Menu"
+          data-testid="menu-btn"
           onClick={() => setSidebarActive((prev) => !prev)}
         >
           <MdMenu size="28" />
@@ -47,6 +48,7 @@ export default function PageHeader({
         <Button
           variant="subtle"
           aria-label="Use Dark Mode"
+          data-testid="dark-mode-btn"
           onClick={toggleDarkMode}
         >
           {isDarkMode ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}

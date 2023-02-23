@@ -6,8 +6,10 @@ export default function NotFound() {
   return (
     <div className={styles.container}>
       <MdErrorOutline size="86" className={styles.icon} />
-      <h2 className={styles.title}>This page could not be found</h2>
-      <Link to="/" className={styles.homeLink}>
+      <h2 className={styles.title} data-testid="not-found-heading">
+        This page could not be found
+      </h2>
+      <Link to="/" className={styles.homeLink} data-testid="home-link">
         Back to the overview page
       </Link>
     </div>
