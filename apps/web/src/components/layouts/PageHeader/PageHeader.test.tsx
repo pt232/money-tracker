@@ -16,7 +16,7 @@ describe("PageHeader", () => {
     expect(screen.getByText(title)).toBeInTheDocument();
   });
 
-  it("handles button clicks", async () => {
+  it("toggles sidebar and dark mode on click", async () => {
     const setSidebarActive = vi.fn();
     const toggleDarkMode = vi.fn();
     const user = userEvent.setup();
@@ -30,16 +30,15 @@ describe("PageHeader", () => {
       />,
     );
 
-    await user.click(
-      screen.getByRole("button", {
-        name: "Open Menu",
-      }),
-    );
-    await user.click(
-      screen.getByRole("button", {
-        name: "Use Dark Mode",
-      }),
-    );
+    const menuBtn = screen.getByRole("button", {
+      name: /open menu/i,
+    });
+    const modeBtn = screen.getByRole("button", {
+      name: /use dark mode/i,
+    });
+
+    await user.click(menuBtn);
+    await user.click(modeBtn);
 
     expect(setSidebarActive.mock.calls).toHaveLength(1);
     expect(toggleDarkMode.mock.calls).toHaveLength(1);
