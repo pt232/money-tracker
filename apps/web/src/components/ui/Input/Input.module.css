@@ -30,7 +30,7 @@
 }
 
 .input.error {
-  border-color: var(--red-500);
+  border-color: var(--red-700);
 }
 
 .dark .input.error {
