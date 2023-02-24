@@ -87,7 +87,7 @@
   display: block;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .sidebar {
     position: unset;
     transform: unset;

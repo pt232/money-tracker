@@ -1,0 +1,22 @@
+.overview-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overview-card-container > * {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .overview-card-container {
+    gap: 1.4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .overview-card-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

@@ -9,8 +9,12 @@
   padding: 0 2.4rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .page-content {
     padding: 0 3.2rem;
+  }
+
+  .page-content main {
+    margin-top: 1.6rem;
   }
 }
