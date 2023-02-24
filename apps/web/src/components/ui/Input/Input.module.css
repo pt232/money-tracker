@@ -30,11 +30,11 @@
 }
 
 .input.error {
-  border-color: var(--error-500);
+  border-color: var(--red-500);
 }
 
 .dark .input.error {
-  border-color: var(--error-400);
+  border-color: var(--red-400);
 }
 
 .input-icon {

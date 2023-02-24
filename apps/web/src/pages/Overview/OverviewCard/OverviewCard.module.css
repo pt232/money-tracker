@@ -42,20 +42,20 @@
 
 .postive-difference > svg,
 .postive-difference .difference-amount {
-  color: var(--success-700);
+  color: var(--green-700);
 }
 
 .negative-difference > svg,
 .negative-difference .difference-amount {
-  color: var(--error-700);
+  color: var(--red-700);
 }
 
 .dark .postive-difference > svg,
 .dark .postive-difference .difference-amount {
-  color: var(--success-400);
+  color: var(--green-400);
 }
 
 .dark .negative-difference > svg,
 .dark .negative-difference .difference-amount {
-  color: var(--error-400);
+  color: var(--red-400);
 }

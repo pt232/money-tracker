@@ -20,12 +20,12 @@
 
 .error-message {
   margin-top: 6px;
-  color: var(--error-500);
+  color: var(--red-500);
   font-size: 1.4rem;
 }
 
 .dark .error-message {
-  color: var(--error-400);
+  color: var(--red-400);
 }
 
 .info-message {
